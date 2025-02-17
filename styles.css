@@ -1,0 +1,41 @@
+/*StAuth10244: I Karanveer Singh, 000930881 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+}
+
+#map {
+    height: 700px;
+    width: 90%; 
+    margin: auto; 
+    border-radius: 10px; 
+    border: 2px solid #007bff; 
+}
+
+.header {
+    background: linear-gradient(45deg, #08396e, #6c757d); 
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+#searchBar {
+    position: relative;
+    z-index: 1000; 
+}
+
+#suggestions {
+    position: absolute;
+    background: white;
+    z-index: 1001; 
+    width: 90%; 
+    max-height: 200px; 
+    overflow-y: auto; 
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+

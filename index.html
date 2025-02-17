@@ -1,0 +1,51 @@
+<!--StAuth10244: I Karanveer Singh, 000930881 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinking Fountains Map</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+
+    <!-- Bootstrap CSS link for responsive design-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- library needed since the csv file has coordinates in UTM format, which Google Maps wont be able to interpret so i added a new lib. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.js"></script>
+
+    <!--Google map API script, map won't work without the api key so we add in it along with marker library -->
+    <script async 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnN9fpIMxhov_kNzrBm87nhQxzUkht2yw&libraries=marker&callback=initMap">
+    </script>
+</head>
+
+<body>
+    <div class="header"> Drinking Fountains in Hamilton </div>
+
+    <div class="container text-center mt-3">
+        <input type="text" id="searchBar" class="form-control" placeholder="Search for a fountain or enter an address..." autocomplete="off">
+        <div id="suggestions" class="list-group position-absolute w-100"></div> <!-- Dropdown suggestions -->
+    </div>      
+    
+    <div id="map" class="container mt-3"></div>
+
+    <div class="container text-center mt-3">
+        <button id="userlocation" class="btn btn-primary m-2">Where Am I?</button>
+        <button id="filterClosest" class="btn btn-success m-2">Show Closest Fountain</button>
+        <button id="BacktoDefault" class="btn btn-secondary m-2">Return to Map View</button>
+        <button id="clearMap" class="btn btn-danger m-2">Clear Map</button>
+    </div>
+    
+    <div class="container text-center mt-3">
+        <button id="ONstatus" class="btn btn-info m-2 filter-button">Currently Functional</button>
+        <button id="filterBottle" class="btn btn-warning m-2 filter-button">Bottle Filler</button>
+        <button id="filterDogBowl" class="btn btn-success m-2 filter-button">Dog Bowl</button>
+        <button id="filterAll" class="btn btn-secondary m-2 filter-button">Show All</button>
+    </div>
+    
+
+</body>
+</html>
