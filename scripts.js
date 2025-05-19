@@ -41,7 +41,7 @@ function initMap() {
     });
 
     //Fetch CSV and convert to JSON dynamically
-    fetch('Drinking_Fountains.csv')
+    fetch('https://raw.githubusercontent.com/Karan16-hub/drinking-water-fountain-project/main/Drinking_Fountains.csv')
         .then(response => response.text()) // reads CSV as plain text
         .then(csvText => {
             const jsonData = csvToJson(csvText); // Convert CSV to JSON
